@@ -1,13 +1,14 @@
 package swets.clan.frosthexCustceneV1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
-public class cutscene {
-    private List<Location> cutscenePath;
+public class Cutscene {
+    private List<Location> cutscenePath = new ArrayList<>();
     private Location endPosition;
     private int waitDuration = 5;
 
@@ -26,8 +27,13 @@ public class cutscene {
         //temporary solution 20/06/25
         for (Location point : cutscenePath){
             player.teleport(point);
-            wait(waitDuration);
+            try {
+                Thread.sleep(waitDuration * 1000); // assuming seconds
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }// tekad was here
+        //hi tekad
     }
 
     private void setEndPosition(Location end){
