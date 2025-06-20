@@ -1,0 +1,11 @@
+name: frosthex custcene v1
+version: '1.0-SNAPSHOT'
+main: swets.clan.frosthexCustceneV1.FrosthexCustceneV1
+api-version: '1.21'
+commands:
+  Cutscenecommand:
+    description: toggles cutscene for the command sender.
+    usage: /cutscene start
+    aliases: [Cutscene create, Cutscene start, Cutscene name]
+    permission: cutscene
+    permission-message: How did you get this
