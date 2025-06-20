@@ -7,11 +7,15 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 public class cutscene {
+    private String name;
     private List<Location> cutscenePath;
     private Location endPosition;
     private int waitDuration = 5;
 
-    public void cutscene
+    public cutscene(String name) {
+        this.name = name;
+    }
+
     public List<Location> getPoses(){
         return cutscenePath;
     }
